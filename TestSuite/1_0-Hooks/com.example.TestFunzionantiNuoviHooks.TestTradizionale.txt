@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.example.TestFunzionantiNuoviHooks.TestTradizionale
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.157 s <<< FAILURE! - in com.example.TestFunzionantiNuoviHooks.TestTradizionale
+testTradizionale_release_1_0(com.example.TestFunzionantiNuoviHooks.TestTradizionale)  Time elapsed: 0.087 s  <<< ERROR!
+java.lang.IllegalStateException: The driver executable does not exist: /home/runner/work/Tesi-StrumentoGenerale/Tesi-StrumentoGenerale/project-test-headless
+	at com.example.TestFunzionantiNuoviHooks.TestTradizionale.setUp(TestTradizionale.java:23)
+
+testTradizionale_release_1_0(com.example.TestFunzionantiNuoviHooks.TestTradizionale)  Time elapsed: 0.093 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.example.TestFunzionantiNuoviHooks.TestTradizionale.tearDown(TestTradizionale.java:46)
+
