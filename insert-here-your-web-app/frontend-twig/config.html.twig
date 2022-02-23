@@ -1,5 +1,4 @@
-{#**
- * 2007-2019 PrestaShop and Contributors
+{#** * 2007-2019 PrestaShop and Contributors
  *
  * NOTICE OF LICENSE
  *
@@ -43,65 +42,65 @@
     {% endif %}
 
     {% set icon %}
-        <span class="sf-toolbar-label"><img src="{{ asset('themes/new-theme/scss/img/glyph.png') }}" /></span>
-        <span class="sf-toolbar-value">{{ collector.applicationversion }}</span>
+        <span class="sf-toolbar-label" x730529415806-x-test-tpl-1><img src="{{ asset('themes/new-theme/scss/img/glyph.png') }}" / x730529415806-x-test-hook-2></span>
+        <span class="sf-toolbar-value" x730529415806-x-test-tpl-3>{{ collector.applicationversion }}</span>
     {% endset %}
 
     {% set text %}
-        <div class="sf-toolbar-info-group">
-            <div class="sf-toolbar-info-piece">
-                <b>{{ collector.applicationname }}</b>
-                <span>{{ collector.applicationversion }}</span>
+        <div class="sf-toolbar-info-group" x730529415806-x-test-tpl-4>
+            <div class="sf-toolbar-info-piece" x730529415806-x-test-hook-5>
+                <b x730529415806-x-test-hook-6>{{ collector.applicationname }}</b>
+                <span x730529415806-x-test-hook-7>{{ collector.applicationversion }}</span>
             </div>
 
-            <div class="sf-toolbar-info-piece">
-                <b>Profiler token</b>
-                <span>
+            <div class="sf-toolbar-info-piece" x730529415806-x-test-hook-8>
+                <b x730529415806-x-test-hook-9>Profiler token</b>
+                <span x730529415806-x-test-hook-10>
                     {% if profiler_url %}
-                        <a href="{{ profiler_url }}">{{ collector.token }}</a>
+                        <a href="{{ profiler_url }}" x730529415806-x-test-hook-11>{{ collector.token }}</a>
                     {% else %}
                         {{ collector.token }}
                     {% endif %}
                 </span>
             </div>
 
-            <div class="sf-toolbar-info-piece">
-                <b>Symfony</b>
-                <span>
-                    <a href="https://symfony.com/doc/{{ collector.symfonyversion }}/index.html" rel="help">
+            <div class="sf-toolbar-info-piece" x730529415806-x-test-hook-12>
+                <b x730529415806-x-test-hook-13>Symfony</b>
+                <span x730529415806-x-test-hook-14>
+                    <a href="https://symfony.com/doc/{{ collector.symfonyversion }}/index.html" rel="help" x730529415806-x-test-hook-15>
                         Read Symfony {{ collector.symfonyversion }} Docs
                     </a>
                 </span>
             </div>
         </div>
-        <div class="sf-toolbar-info-group">
-            <div class="sf-toolbar-info-piece sf-toolbar-info-php">
-                <b>PHP version</b>
-                <span{% if collector.phpversionextra %} title="{{ collector.phpversion ~ collector.phpversionextra }}"{% endif %}>
+        <div class="sf-toolbar-info-group" x730529415806-x-test-tpl-16>
+            <div class="sf-toolbar-info-piece sf-toolbar-info-php" x730529415806-x-test-hook-17>
+                <b x730529415806-x-test-hook-18>PHP version</b>
+                <span{% if collector.phpversionextra %} title="{{ collector.phpversion ~ collector.phpversionextra }}"{% endif %} x730529415806-x-test-hook-19>
                     {{ collector.phpversion }}
-                    &nbsp; <a href="{{ path('_profiler_phpinfo') }}">View phpinfo()</a>
+                    &nbsp; <a href="{{ path('_profiler_phpinfo') }}" x730529415806-x-test-hook-20>View phpinfo()</a>
                 </span>
             </div>
 
-            <div class="sf-toolbar-info-piece sf-toolbar-info-php-ext">
-                <b>PHP Extensions</b>
-                <span class="sf-toolbar-status sf-toolbar-status-{{ collector.hasxdebug ? 'green' : 'red' }}">xdebug</span>
-                <span class="sf-toolbar-status sf-toolbar-status-{{ collector.hasapcu ? 'green' : 'red' }}">APCu</span>
-                <span class="sf-toolbar-status sf-toolbar-status-{{ collector.haszendopcache ? 'green' : 'red' }}">OPcache</span>
+            <div class="sf-toolbar-info-piece sf-toolbar-info-php-ext" x730529415806-x-test-hook-21>
+                <b x730529415806-x-test-hook-22>PHP Extensions</b>
+                <span class="sf-toolbar-status sf-toolbar-status-{{ collector.hasxdebug ? 'green' : 'red' }}" x730529415806-x-test-hook-23>xdebug</span>
+                <span class="sf-toolbar-status sf-toolbar-status-{{ collector.hasapcu ? 'green' : 'red' }}" x730529415806-x-test-hook-24>APCu</span>
+                <span class="sf-toolbar-status sf-toolbar-status-{{ collector.haszendopcache ? 'green' : 'red' }}" x730529415806-x-test-hook-25>OPcache</span>
             </div>
 
-            <div class="sf-toolbar-info-piece">
-                <b>PHP SAPI</b>
-                <span>{{ collector.sapiName }}</span>
+            <div class="sf-toolbar-info-piece" x730529415806-x-test-hook-26>
+                <b x730529415806-x-test-hook-27>PHP SAPI</b>
+                <span x730529415806-x-test-hook-28>{{ collector.sapiName }}</span>
             </div>
         </div>
 
-        <div class="sf-toolbar-info-group">
-            <div class="sf-toolbar-info-piece">
-                <b>Resources</b>
-                <span>
+        <div class="sf-toolbar-info-group" x730529415806-x-test-tpl-29>
+            <div class="sf-toolbar-info-piece" x730529415806-x-test-hook-30>
+                <b x730529415806-x-test-hook-31>Resources</b>
+                <span x730529415806-x-test-hook-32>
                     {% set appVersion = collector.applicationversion|split('.')|join()[:2] %}
-                    <a href="http://doc.prestashop.com/display/PS{{ appVersion }}" rel="help">
+                    <a href="http://doc.prestashop.com/display/PS{{ appVersion }}" rel="help" x730529415806-x-test-hook-33>
                         Read PrestaShop {{ collector.applicationversion }} Docs
                     </a>
                 </span>
@@ -113,159 +112,159 @@
 {% endblock %}
 
 {% block menu %}
-    <span class="label label-status-{{ collector.symfonyState == 'eol' ? 'red' : collector.symfonyState in ['eom', 'dev'] ? 'yellow' : '' }}">
-        <span class="icon">{{ include('@WebProfiler/Icon/config.svg') }}</span>
-        <strong>Configuration</strong>
+    <span class="label label-status-{{ collector.symfonyState == 'eol' ? 'red' : collector.symfonyState in ['eom', 'dev'] ? 'yellow' : '' }}" x730529415806-x-test-tpl-34>
+        <span class="icon" x730529415806-x-test-hook-35>{{ include('@WebProfiler/Icon/config.svg') }}</span>
+        <strong x730529415806-x-test-hook-36>Configuration</strong>
     </span>
 {% endblock %}
 
 {% block panel %}
     {% if collector.applicationname %}
         {# this application is not the Symfony framework #}
-        <h2>Project Configuration</h2>
+        <h2 x730529415806-x-test-tpl-37>Project Configuration</h2>
 
-        <div class="metrics">
-            <div class="metric">
-                <span class="value">{{ collector.applicationname }}</span>
-                <span class="label">Application name</span>
+        <div class="metrics" x730529415806-x-test-tpl-38>
+            <div class="metric" x730529415806-x-test-hook-39>
+                <span class="value" x730529415806-x-test-hook-40>{{ collector.applicationname }}</span>
+                <span class="label" x730529415806-x-test-hook-41>Application name</span>
             </div>
 
-            <div class="metric">
-                <span class="value">{{ collector.applicationversion }}</span>
-                <span class="label">Application version</span>
+            <div class="metric" x730529415806-x-test-hook-42>
+                <span class="value" x730529415806-x-test-hook-43>{{ collector.applicationversion }}</span>
+                <span class="label" x730529415806-x-test-hook-44>Application version</span>
             </div>
         </div>
 
-        <p>
-            Based on <a class="text-bold" href="https://symfony.com">Symfony {{ collector.symfonyversion }}</a>
+        <p x730529415806-x-test-tpl-45>
+            Based on <a class="text-bold" href="https://symfony.com" x730529415806-x-test-hook-46>Symfony {{ collector.symfonyversion }}</a>
         </p>
     {% else %}
-        <h2>Symfony Configuration</h2>
+        <h2 x730529415806-x-test-tpl-47>Symfony Configuration</h2>
 
-        <div class="metrics">
-            <div class="metric">
-                <span class="value">{{ collector.symfonyversion }}</span>
-                <span class="label">Symfony version</span>
+        <div class="metrics" x730529415806-x-test-tpl-48>
+            <div class="metric" x730529415806-x-test-hook-49>
+                <span class="value" x730529415806-x-test-hook-50>{{ collector.symfonyversion }}</span>
+                <span class="label" x730529415806-x-test-hook-51>Symfony version</span>
             </div>
 
             {% if 'n/a' != collector.appname %}
-                <div class="metric">
-                    <span class="value">{{ collector.appname }}</span>
-                    <span class="label">Application name</span>
+                <div class="metric" x730529415806-x-test-hook-52>
+                    <span class="value" x730529415806-x-test-hook-53>{{ collector.appname }}</span>
+                    <span class="label" x730529415806-x-test-hook-54>Application name</span>
                 </div>
             {% endif %}
 
             {% if 'n/a' != collector.env %}
-                <div class="metric">
-                    <span class="value">{{ collector.env }}</span>
-                    <span class="label">Environment</span>
+                <div class="metric" x730529415806-x-test-hook-55>
+                    <span class="value" x730529415806-x-test-hook-56>{{ collector.env }}</span>
+                    <span class="label" x730529415806-x-test-hook-57>Environment</span>
                 </div>
             {% endif %}
 
             {% if 'n/a' != collector.debug %}
-                <div class="metric">
-                    <span class="value">{{ collector.debug ? 'enabled' : 'disabled' }}</span>
-                    <span class="label">Debug</span>
+                <div class="metric" x730529415806-x-test-hook-58>
+                    <span class="value" x730529415806-x-test-hook-59>{{ collector.debug ? 'enabled' : 'disabled' }}</span>
+                    <span class="label" x730529415806-x-test-hook-60>Debug</span>
                 </div>
             {% endif %}
         </div>
 
         {% set symfony_status = { dev: 'Unstable Version', stable: 'Stable Version', eom: 'Maintenance Ended', eol: 'Version Expired' } %}
         {% set symfony_status_class = { dev: 'warning', stable: 'success', eom: 'warning', eol: 'error' } %}
-        <table>
-            <thead class="small">
-                <tr>
-                    <th>Symfony Status</th>
-                    <th>Bugs {{ collector.symfonystate in ['eom', 'eol'] ? 'were' : 'are' }} fixed until</th>
-                    <th>Security issues {{ collector.symfonystate == 'eol' ? 'were' : 'are' }} fixed until</th>
-                    <th></th>
+        <table x730529415806-x-test-tpl-61>
+            <thead class="small" x730529415806-x-test-hook-62>
+                <tr x730529415806-x-test-hook-63>
+                    <th x730529415806-x-test-hook-64>Symfony Status</th>
+                    <th x730529415806-x-test-hook-65>Bugs {{ collector.symfonystate in ['eom', 'eol'] ? 'were' : 'are' }} fixed until</th>
+                    <th x730529415806-x-test-hook-66>Security issues {{ collector.symfonystate == 'eol' ? 'were' : 'are' }} fixed until</th>
+                    <th x730529415806-x-test-hook-67></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td class="font-normal">
-                        <span class="label status-{{ symfony_status_class[collector.symfonystate] }}">{{ symfony_status[collector.symfonystate]|upper }}</span>
+            <tbody x730529415806-x-test-hook-68>
+                <tr x730529415806-x-test-hook-69>
+                    <td class="font-normal" x730529415806-x-test-hook-70>
+                        <span class="label status-{{ symfony_status_class[collector.symfonystate] }}" x730529415806-x-test-hook-71>{{ symfony_status[collector.symfonystate]|upper }}</span>
                     </td>
-                    <td class="font-normal">{{ collector.symfonyeom }}</td>
-                    <td class="font-normal">{{ collector.symfonyeol }}</td>
-                    <td class="font-normal">
-                        <a href="https://symfony.com/roadmap?version={{ collector.symfonyminorversion }}#checker">View roadmap</a>
+                    <td class="font-normal" x730529415806-x-test-hook-72>{{ collector.symfonyeom }}</td>
+                    <td class="font-normal" x730529415806-x-test-hook-73>{{ collector.symfonyeol }}</td>
+                    <td class="font-normal" x730529415806-x-test-hook-74>
+                        <a href="https://symfony.com/roadmap?version={{ collector.symfonyminorversion }}#checker" x730529415806-x-test-hook-75>View roadmap</a>
                     </td>
                 </tr>
             </tbody>
         </table>
     {% endif %}
 
-    <h2>PHP Configuration</h2>
+    <h2 x730529415806-x-test-tpl-76>PHP Configuration</h2>
 
-    <div class="metrics">
-        <div class="metric">
-            <span class="value">{{ collector.phpversion }}{% if collector.phpversionextra %} <span class="unit">{{ collector.phpversionextra }}</span>{% endif %}</span>
-            <span class="label">PHP version</span>
+    <div class="metrics" x730529415806-x-test-tpl-77>
+        <div class="metric" x730529415806-x-test-hook-78>
+            <span class="value" x730529415806-x-test-hook-79>{{ collector.phpversion }}{% if collector.phpversionextra %} <span class="unit" x730529415806-x-test-hook-80>{{ collector.phpversionextra }}</span>{% endif %}</span>
+            <span class="label" x730529415806-x-test-hook-81>PHP version</span>
         </div>
 
-        <div class="metric">
-            <span class="value">{{ collector.phparchitecture }} <span class="unit">bits</span></span>
-            <span class="label">Architecture</span>
+        <div class="metric" x730529415806-x-test-hook-82>
+            <span class="value" x730529415806-x-test-hook-83>{{ collector.phparchitecture }} <span class="unit" x730529415806-x-test-hook-84>bits</span></span>
+            <span class="label" x730529415806-x-test-hook-85>Architecture</span>
         </div>
 
-        <div class="metric">
-            <span class="value">{{ collector.phpintllocale }}</span>
-            <span class="label">Intl locale</span>
+        <div class="metric" x730529415806-x-test-hook-86>
+            <span class="value" x730529415806-x-test-hook-87>{{ collector.phpintllocale }}</span>
+            <span class="label" x730529415806-x-test-hook-88>Intl locale</span>
         </div>
 
-        <div class="metric">
-            <span class="value">{{ collector.phptimezone }}</span>
-            <span class="label">Timezone</span>
+        <div class="metric" x730529415806-x-test-hook-89>
+            <span class="value" x730529415806-x-test-hook-90>{{ collector.phptimezone }}</span>
+            <span class="label" x730529415806-x-test-hook-91>Timezone</span>
         </div>
     </div>
 
-    <div class="sf-toolbar-info-group">
-        <div class="sf-toolbar-info-piece">
-          <b>Resources</b>
-          <span>
+    <div class="sf-toolbar-info-group" x730529415806-x-test-tpl-92>
+        <div class="sf-toolbar-info-piece" x730529415806-x-test-hook-93>
+          <b x730529415806-x-test-hook-94>Resources</b>
+          <span x730529415806-x-test-hook-95>
             {% set appVersion = collector.applicationversion|split('.')|join()[:2] %}
-              <a href="http://doc.prestashop.com/display/PS{{ appVersion }}" rel="help">
+              <a href="http://doc.prestashop.com/display/PS{{ appVersion }}" rel="help" x730529415806-x-test-hook-96>
                   Read PrestaShop {{ collector.applicationversion }} Docs
               </a>
           </span>
         </div>
     </div>
-    <div class="metrics">
-        <div class="metric">
-            <span class="value">{{ include('@WebProfiler/Icon/' ~ (collector.haszendopcache ? 'yes' : 'no') ~ '.svg') }}</span>
-            <span class="label">OPcache</span>
+    <div class="metrics" x730529415806-x-test-tpl-97>
+        <div class="metric" x730529415806-x-test-hook-98>
+            <span class="value" x730529415806-x-test-hook-99>{{ include('@WebProfiler/Icon/' ~ (collector.haszendopcache ? 'yes' : 'no') ~ '.svg') }}</span>
+            <span class="label" x730529415806-x-test-hook-100>OPcache</span>
         </div>
 
-        <div class="metric">
-            <span class="value">{{ include('@WebProfiler/Icon/' ~ (collector.hasapcu ? 'yes' : 'no') ~ '.svg') }}</span>
-            <span class="label">APCu</span>
+        <div class="metric" x730529415806-x-test-hook-101>
+            <span class="value" x730529415806-x-test-hook-102>{{ include('@WebProfiler/Icon/' ~ (collector.hasapcu ? 'yes' : 'no') ~ '.svg') }}</span>
+            <span class="label" x730529415806-x-test-hook-103>APCu</span>
         </div>
 
-        <div class="metric">
-            <span class="value">{{ include('@WebProfiler/Icon/' ~ (collector.hasxdebug ? 'yes' : 'no') ~ '.svg') }}</span>
-            <span class="label">Xdebug</span>
+        <div class="metric" x730529415806-x-test-hook-104>
+            <span class="value" x730529415806-x-test-hook-105>{{ include('@WebProfiler/Icon/' ~ (collector.hasxdebug ? 'yes' : 'no') ~ '.svg') }}</span>
+            <span class="label" x730529415806-x-test-hook-106>Xdebug</span>
         </div>
     </div>
 
-    <p>
-        <a href="{{ path('_profiler_phpinfo') }}">View full PHP configuration</a>
+    <p x730529415806-x-test-tpl-107>
+        <a href="{{ path('_profiler_phpinfo') }}" x730529415806-x-test-hook-108>View full PHP configuration</a>
     </p>
 
     {% if collector.bundles %}
-        <h2>Enabled Bundles <small>({{ collector.bundles|length }})</small></h2>
-        <table>
-            <thead>
-                <tr>
-                    <th class="key">Name</th>
-                    <th>Path</th>
+        <h2 x730529415806-x-test-tpl-109>Enabled Bundles <small x730529415806-x-test-hook-110>({{ collector.bundles|length }})</small></h2>
+        <table x730529415806-x-test-tpl-111>
+            <thead x730529415806-x-test-hook-112>
+                <tr x730529415806-x-test-hook-113>
+                    <th class="key" x730529415806-x-test-hook-114>Name</th>
+                    <th x730529415806-x-test-hook-115>Path</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody x730529415806-x-test-hook-116>
                 {% for name in collector.bundles|keys|sort %}
-                <tr>
-                    <th scope="row" class="font-normal">{{ name }}</th>
-                    <td class="font-normal">{{ profiler_dump(collector.bundles[name]) }}</td>
+                <tr x730529415806-x-test-hook-117>
+                    <th scope="row" class="font-normal" x730529415806-x-test-hook-118>{{ name }}</th>
+                    <td class="font-normal" x730529415806-x-test-hook-119>{{ profiler_dump(collector.bundles[name]) }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

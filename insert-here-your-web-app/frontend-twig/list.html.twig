@@ -1,5 +1,4 @@
-{#**
- * 2007-2018 PrestaShop
+{#** * 2007-2018 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -25,43 +24,43 @@
 <tbody
     {% if activate_drag_and_drop and has_category_filter %}class="sortable"{% endif %}
     last_sql="{{ last_sql_query|escape('html_attr') }}"
-data-x-tpl-hook-13>
+data-x-tpl-hook-13 x730595211211-x-test-tpl-1>
     {% for product in products %}
     {% block product_catalog_form_table_row %}
-    <tr data-uniturl="{{ product.unit_action_url|default('#') }}" data-product-id="{{ product.id_product }}">
-        <td class="checkbox-column form-group">
-            <div class="md-checkbox md-checkbox-inline">
-                <label>
-                    <input type="checkbox" id="bulk_action_selected_products-{{ product.id_product }}" name="bulk_action_selected_products[]" value="{{ product.id_product }}">
-                    <i class="md-checkbox-control"></i>
+    <tr data-uniturl="{{ product.unit_action_url|default('#') }}" data-product-id="{{ product.id_product }}" x730595211211-x-test-tpl-2>
+        <td class="checkbox-column form-group" x730595211211-x-test-hook-3>
+            <div class="md-checkbox md-checkbox-inline" x730595211211-x-test-hook-4>
+                <label x730595211211-x-test-hook-5>
+                    <input type="checkbox" id="bulk_action_selected_products-{{ product.id_product }}" name="bulk_action_selected_products[]" value="{{ product.id_product }}" x730595211211-x-test-hook-6>
+                    <i class="md-checkbox-control" x730595211211-x-test-hook-7></i>
                 </label>
             </div>
         </td>
-        <td>
-            <label class="form-check-label" for="bulk_action_selected_products-{{ product.id_product }}">
+        <td x730595211211-x-test-hook-8>
+            <label class="form-check-label" for="bulk_action_selected_products-{{ product.id_product }}" x730595211211-x-test-hook-9>
                 {{ product.id_product }}
             </label>
         </td>
-        <td>
-            <a href="{{ product.url|default('') }}#tab-step1">{{ product.image|raw }}</a>
+        <td x730595211211-x-test-hook-10>
+            <a href="{{ product.url|default('') }}#tab-step1" x730595211211-x-test-hook-11>{{ product.image|raw }}</a>
         </td>
-        <td>
-            <a href="{{ product.url|default('') }}#tab-step1">{{ product.name|default('N/A'|trans({}, 'Admin.Global')) }}</a>
+        <td x730595211211-x-test-hook-12>
+            <a href="{{ product.url|default('') }}#tab-step1" x730595211211-x-test-hook-13>{{ product.name|default('N/A'|trans({}, 'Admin.Global')) }}</a>
         </td>
-        <td>
+        <td x730595211211-x-test-hook-14>
             {{ product.reference|default('') }}
         </td>
-        <td>
+        <td x730595211211-x-test-hook-15>
             {{ product.name_category|default('') }}
         </td>
-        <td class="text-center">
-            <a href="{{ product.url|default('') }}#tab-step2">{{ product.price|default('N/A'|trans({}, 'Admin.Global')) }}</a>
+        <td class="text-center" x730595211211-x-test-hook-16>
+            <a href="{{ product.url|default('') }}#tab-step2" x730595211211-x-test-hook-17>{{ product.price|default('N/A'|trans({}, 'Admin.Global')) }}</a>
         </td>
 
         {% if 'PS_STOCK_MANAGEMENT'|configuration %}
-            <td class="product-sav-quantity text-center" data-product-quantity-value="{{ product.sav_quantity|default('') }}">
-                <a href="{{ product.url|default('') }}#tab-step3">
-                    {% if product.sav_quantity is defined and product.sav_quantity > 0 %}
+            <td class="product-sav-quantity text-center" data-product-quantity-value="{{ product.sav_quantity|default('') }}" x730595211211-x-test-hook-18>
+                <a href="{{ product.url|default('') }}#tab-step3" x730595211211-x-test-hook-19>
+                    {% if product.sav_quantity is defined and product.sav_quantity> 0 %}
                         {{ product.sav_quantity }}
                     {% else %}
                         {{ product.sav_quantity|default('N/A'|trans({}, 'Admin.Global')) }}
@@ -69,31 +68,31 @@ data-x-tpl-hook-13>
                 </a>
             </td>
         {% else %}
-            <td></td>
+            <td x730595211211-x-test-hook-20></td>
         {% endif %}
-        <td class="text-center">
+        <td class="text-center" x730595211211-x-test-hook-21>
             {% if product.active|default(0) == 0 %}
-                <a href="#" onclick="unitProductAction(this, 'activate'); return false;">
-                    <i class="material-icons action-disabled">clear</i>
+                <a href="#" onclick="unitProductAction(this, 'activate'); return false;" x730595211211-x-test-hook-22>
+                    <i class="material-icons action-disabled" x730595211211-x-test-hook-23>clear</i>
                 </a>
             {% else %}
-                <a href="#" onclick="unitProductAction(this, 'deactivate'); return false;">
-                    <i class="material-icons action-enabled ">check</i>
+                <a href="#" onclick="unitProductAction(this, 'deactivate'); return false;" x730595211211-x-test-hook-24>
+                    <i class="material-icons action-enabled " x730595211211-x-test-hook-25>check</i>
                 </a>
             {% endif %}
         </td>
         {% if product.position is defined %}
             <td {% if activate_drag_and_drop %}class="placeholder"{% endif %} style="cursor: pointer; cursor: hand;" data-x-test-hook-5>
                 {% if activate_drag_and_drop %}
-                    <big><big>⇅</big></big>
+                    <big x730595211211-x-test-hook-27><big x730595211211-x-test-hook-28>⇅</big></big>
                 {% endif %}
-                <span class="position">{{ product.position }}</span>
-                <input type="hidden" name="mass_edit_action_sorted_products[]" value="{{ product.id_product }}" />
-                <input type="hidden" name="mass_edit_action_sorted_positions[]" value="{{ product.position }}" />
+                <span class="position" x730595211211-x-test-hook-29>{{ product.position }}</span>
+                <input type="hidden" name="mass_edit_action_sorted_products[]" value="{{ product.id_product }}" / x730595211211-x-test-hook-30>
+                <input type="hidden" name="mass_edit_action_sorted_positions[]" value="{{ product.position }}" / x730595211211-x-test-hook-31>
             </td>
         {% endif %}
-        <td class="text-right">
-            <div class="btn-group-action">
+        <td class="text-right" x730595211211-x-test-hook-32>
+            <div class="btn-group-action" x730595211211-x-test-hook-33>
 
                 {% set buttons_action = [
                     {
@@ -134,7 +133,8 @@ data-x-tpl-hook-13>
     </tr>
     {% endblock %}
 {% else %}
-<tr><td colspan="11">
+<tr x730595211211-x-test-tpl-34><td colspan="11" x730595211211-x-test-hook-35>
         {{ "There is no result for this search. Update your filters to view other products."|trans({}, 'Admin.Catalog.Notification') }}
     </td></tr>
-{% endfor %}
+{% endfor %}
+

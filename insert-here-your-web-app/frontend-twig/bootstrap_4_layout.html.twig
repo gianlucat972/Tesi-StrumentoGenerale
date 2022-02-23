@@ -1,5 +1,4 @@
-{#**
- * 2007-2019 PrestaShop and Contributors
+{#** * 2007-2019 PrestaShop and Contributors
  *
  * NOTICE OF LICENSE
  *
@@ -40,27 +39,27 @@
 {# Widgets #}
 
 {% block money_widget -%}
-    <div class="input-group money-type">
+    <div class="input-group money-type" x730465936450-x-test-tpl-1>
         {% set prepend = '{{' == money_pattern[0:2] %}
         {% if not prepend %}
-            <div class="input-group-prepend">
-                <span class="input-group-text">{{ money_pattern|replace({ '{{ widget }}':''}) }}</span>
+            <div class="input-group-prepend" x730465936450-x-test-hook-2>
+                <span class="input-group-text" x730465936450-x-test-hook-3>{{ money_pattern|replace({ '{{ widget }}':''}) }}</span>
             </div>
         {% endif %}
         {{- block('form_widget_simple') -}}
         {% if prepend %}
-            <div class="input-group-append">
-                <span class="input-group-text">{{ money_pattern|replace({ '{{ widget }}':''}) }}</span>
+            <div class="input-group-append" x730465936450-x-test-hook-4>
+                <span class="input-group-text" x730465936450-x-test-hook-5>{{ money_pattern|replace({ '{{ widget }}':''}) }}</span>
             </div>
         {% endif %}
     </div>
 {%- endblock money_widget %}
 
 {% block percent_widget -%}
-    <div class="input-group">
+    <div class="input-group" x730465936450-x-test-tpl-6>
         {{- block('form_widget_simple') -}}
-        <div class="input-group-append">
-            <span class="input-group-text">%</span>
+        <div class="input-group-append" x730465936450-x-test-hook-7>
+            <span class="input-group-text" x730465936450-x-test-hook-8>%</span>
         </div>
     </div>
 {%- endblock percent_widget %}
@@ -70,7 +69,7 @@
         {{- block('form_widget_simple') -}}
     {% else -%}
         {% set attr = attr|merge({class: (attr.class|default('') ~ ' form-inline')|trim}) -%}
-        <div {{ block('widget_container_attributes') }}>
+        <div {{ block('widget_container_attributes') }} x730465936450-x-test-tpl-9>
             {{- form_errors(form.date) -}}
             {{- form_errors(form.time) -}}
             {{- form_widget(form.date, { datetime: true } ) -}}
@@ -85,7 +84,7 @@
     {% else -%}
         {% set attr = attr|merge({class: (attr.class|default('') ~ ' form-inline')|trim}) -%}
         {% if datetime is not defined or not datetime -%}
-            <div {{ block('widget_container_attributes') -}}>
+            <div {{ block('widget_container_attributes') -}} x730465936450-x-test-tpl-10>
         {%- endif %}
         {{- date_pattern|replace({
             '{{ year }}': form_widget(form.year),
@@ -104,7 +103,7 @@
     {% else -%}
         {% set attr = attr|merge({class: (attr.class|default('') ~ ' form-inline')|trim}) -%}
         {% if datetime is not defined or false == datetime -%}
-            <div {{ block('widget_container_attributes') -}}>
+            <div {{ block('widget_container_attributes') -}} x730465936450-x-test-tpl-11>
         {%- endif -%}
         {{- form_widget(form.hour) }}:{{ form_widget(form.minute) }}{% if with_seconds %}:{{ form_widget(form.second) }}{% endif %}
         {% if datetime is not defined or false == datetime -%}
@@ -120,7 +119,7 @@
 
 {% block choice_widget_expanded -%}
     {% if '-inline' in label_attr.class|default('') -%}
-        <div class="control-group">
+        <div class="control-group" x730465936450-x-test-tpl-12>
             {%- for child in form %}
                 {{- form_widget(child, {
                     parent_label_class: label_attr.class|default(''),
@@ -129,7 +128,7 @@
             {% endfor -%}
         </div>
     {%- else -%}
-        <div {{ block('widget_container_attributes') }}>
+        <div {{ block('widget_container_attributes') }} x730465936450-x-test-tpl-13>
             {%- for child in form %}
                 {{- form_widget(child, {
                     parent_label_class: label_attr.class|default(''),
@@ -145,7 +144,7 @@
     {% if 'checkbox-inline' in parent_label_class %}
         {{- form_label(form, null, { widget: parent() }) -}}
     {% else -%}
-        <div class="checkbox">
+        <div class="checkbox" x730465936450-x-test-tpl-14>
             {{- form_label(form, null, { widget: parent() }) -}}
         </div>
     {%- endif %}
@@ -156,16 +155,16 @@
     {% if 'radio-inline' in parent_label_class %}
         {{- form_label(form, null, { widget: parent() }) -}}
     {% else -%}
-        <div class="radio">
+        <div class="radio" x730465936450-x-test-tpl-15>
             {{- form_label(form, null, { widget: parent() }) -}}
         </div>
     {%- endif %}
 {%- endblock radio_widget %}
 
 {% block choice_tree_widget -%}
-    <div {{ block('widget_container_attributes') }} class="category-tree-overflow">
-        <ul class="category-tree">
-            <li class="form-control-label text-right main-category">{{ "Main category"|trans({}, 'Admin.Catalog.Feature') }}</li>
+    <div {{ block('widget_container_attributes') }} class="category-tree-overflow" x730465936450-x-test-tpl-16>
+        <ul class="category-tree" x730465936450-x-test-hook-17>
+            <li class="form-control-label text-right main-category" x730465936450-x-test-hook-18>{{ "Main category"|trans({}, 'Admin.Catalog.Feature') }}</li>
             {%- for child in choices %}
             {{ block('choice_tree_item_widget') }}
         {% endfor -%}
@@ -174,35 +173,35 @@
 {%- endblock choice_tree_widget %}
 
 {% block choice_tree_item_widget -%}
-    <li>
+    <li x730465936450-x-test-tpl-19>
         {% set checked = (form.vars.submitted_values is defined and submitted_values[child.id_category] is defined) ? 'checked="checked"' : '' %}
         {% if multiple -%}
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" name="{{ form.vars.full_name }}[tree][]" value="{{ child.id_category }}" class="category" {{ checked }}>
+            <div class="checkbox" x730465936450-x-test-hook-20>
+                <label x730465936450-x-test-hook-21>
+                    <input type="checkbox" name="{{ form.vars.full_name }}[tree][]" value="{{ child.id_category }}" class="category" {{ checked }} x730465936450-x-test-hook-22>
                     {% if child.active is defined and child.active == 0 %}
-                        <i>{{ child.name }}</i>
+                        <i x730465936450-x-test-hook-23>{{ child.name }}</i>
                     {%- else -%}
                         {{ child.name }}
                     {% endif %}
                     {% if defaultCategory is defined %}
-                        <input type="radio" value="{{ child.id_category }}" name="ignore" class="default-category" />
+                        <input type="radio" value="{{ child.id_category }}" name="ignore" class="default-category" / x730465936450-x-test-hook-24>
                     {% endif %}
                 </label>
             </div>
         {%- else -%}
-            <div class="radio">
-                <label>
-                    <input type="radio" name="form[{{ form.vars.id }}][tree]" value="{{ child.id_category }}" {{ checked }} class="category">
+            <div class="radio" x730465936450-x-test-hook-25>
+                <label x730465936450-x-test-hook-26>
+                    <input type="radio" name="form[{{ form.vars.id }}][tree]" value="{{ child.id_category }}" {{ checked }} class="category" x730465936450-x-test-hook-27>
                     {{ child.name }}
                     {% if defaultCategory is defined %}
-                        <input type="radio" value="{{ child.id_category }}" name="ignore" class="default-category" />
+                        <input type="radio" value="{{ child.id_category }}" name="ignore" class="default-category" / x730465936450-x-test-hook-28>
                     {% endif %}
                 </label>
             </div>
         {%- endif %}
         {% if child.children is defined %}
-            <ul>
+            <ul x730465936450-x-test-hook-29>
                 {% for item in child.children %}
                     {% set child = item %}
                     {{ block('choice_tree_item_widget') }}
@@ -214,12 +213,12 @@
 
 {% block translatefields_widget %}
     {{ form_errors(form) }}
-    <div class="translations tabbable" id="{{ form.vars.id }}">
-        {% if hideTabs == false and form|length > 1 %}
-        <ul class="translationsLocales nav nav-pills">
+    <div class="translations tabbable" id="{{ form.vars.id }}" x730465936450-x-test-tpl-30>
+        {% if hideTabs == false and form|length> 1 %}
+        <ul class="translationsLocales nav nav-pills" x730465936450-x-test-hook-31>
             {% for translationsFields in form %}
-                <li class="nav-item">
-                    <a href="#" class="{% if defaultLocale.id_lang == translationsFields.vars.name %}active{% endif %} nav-link" data-toggle="tab" data-target=".translationsFields-{{ translationsFields.vars.id }}">
+                <li class="nav-item" x730465936450-x-test-hook-32>
+                    <a href="#" class="{% if defaultLocale.id_lang == translationsFields.vars.name %}active{% endif %} nav-link" data-toggle="tab" data-target=".translationsFields-{{ translationsFields.vars.id }}" x730465936450-x-test-hook-33>
                         {{ translationsFields.vars.label|capitalize }}
                     </a>
                 </li>
@@ -227,9 +226,9 @@
         </ul>
         {% endif %}
 
-        <div class="translationsFields tab-content">
+        <div class="translationsFields tab-content" x730465936450-x-test-hook-34>
             {% for translationsFields in form %}
-                <div class="translationsFields-{{ translationsFields.vars.id }} tab-pane translation-field {% if hideTabs == false and form|length > 1 %}panel panel-default{% endif %} {% if defaultLocale.id_lang == translationsFields.vars.name %}show active{% endif %} {% if not form.vars.valid %}field-error{% endif %} translation-label-{{ translationsFields.vars.label }}">
+                <div class="translationsFields-{{ translationsFields.vars.id }} tab-pane translation-field {% if hideTabs == false and form|length> 1 %}panel panel-default{% endif %} {% if defaultLocale.id_lang == translationsFields.vars.name %}show active{% endif %} {% if not form.vars.valid %}field-error{% endif %} translation-label-{{ translationsFields.vars.label }}" x730465936450-x-test-hook-35>
                     {{ form_errors(translationsFields) }}
                     {{ form_widget(translationsFields) }}
                 </div>
@@ -247,7 +246,7 @@
 
 {% block translate_text_widget -%}
     {{ form_errors(form) }}
-    <div class="input-group locale-input-group js-locale-input-group">
+    <div class="input-group locale-input-group js-locale-input-group" x730465936450-x-test-tpl-36>
         {% for translateField in form %}
             {% set classes = translateField.vars.attr.class|default('') ~ ' js-locale-input'%}
             {% set classes = classes ~ ' js-locale-' ~ translateField.vars.label %}
@@ -262,20 +261,20 @@
         {% endfor %}
 
         {% if not hide_locales %}
-        <div class="dropdown">
+        <div class="dropdown" x730465936450-x-test-hook-37>
             <button class="btn btn-outline-secondary dropdown-toggle js-locale-btn"
                     type="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
                     id="{{ form.vars.id }}"
-            >
+             x730465936450-x-test-hook-38>
                 {{ form.vars.default_locale.iso_code }}
             </button>
 
-            <div class="dropdown-menu" aria-labelledby="{{ form.vars.id }}">
+            <div class="dropdown-menu" aria-labelledby="{{ form.vars.id }}" x730465936450-x-test-hook-39>
                 {% for locale in locales %}
-                    <span class="dropdown-item js-locale-item" data-locale="{{ locale.iso_code }}">{{ locale.name }}</span>
+                    <span class="dropdown-item js-locale-item" data-locale="{{ locale.iso_code }}" x730465936450-x-test-hook-40>{{ locale.name }}</span>
                 {% endfor %}
             </div>
         </div>
@@ -285,7 +284,7 @@
 
 {% block translate_textarea_widget -%}
   {{ form_errors(form) }}
-  <div class="input-group locale-input-group js-locale-input-group">
+  <div class="input-group locale-input-group js-locale-input-group" x730465936450-x-test-tpl-41>
     {% for textarea in form %}
       {% set classes = textarea.vars.attr.class|default('') ~ ' js-locale-input'%}
       {% set classes = classes ~ ' js-locale-' ~ textarea.vars.label %}
@@ -294,28 +293,28 @@
         {% set classes = classes ~ ' d-none' %}
       {% endif %}
 
-      <div class="{{ classes }}">
+      <div class="{{ classes }}" x730465936450-x-test-hook-42>
         {{ form_widget(textarea, {attr: {'class': classes|trim}}) }}
       </div>
     {% endfor %}
 
     {% if show_locale_select %}
-      <div class="dropdown">
+      <div class="dropdown" x730465936450-x-test-hook-43>
         <button class="btn btn-outline-secondary dropdown-toggle js-locale-btn"
                 type="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
                 id="{{ form.vars.id }}"
-        >
+         x730465936450-x-test-hook-44>
           {{ form.vars.default_locale.iso_code }}
         </button>
 
-        <div class="dropdown-menu" aria-labelledby="{{ form.vars.id }}">
+        <div class="dropdown-menu" aria-labelledby="{{ form.vars.id }}" x730465936450-x-test-hook-45>
           {% for locale in locales %}
             <span class="dropdown-item js-locale-item"
                   data-locale="{{ locale.iso_code }}"
-            >
+             x730465936450-x-test-hook-46>
               {{ locale.name }}
             </span>
           {% endfor %}
@@ -328,11 +327,11 @@
 {% block date_picker_widget %}
     {% spaceless %}
         {%  set attr = attr|merge({'class': ((attr.class|default('') ~ ' datepicker')|trim)}) %}
-        <div class="input-group datepicker">
-            <input type="text" class="form-control" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
-            <div class="input-group-append">
-                <div class="input-group-text">
-                    <i class="material-icons">date_range</i>
+        <div class="input-group datepicker" x730465936450-x-test-tpl-47>
+            <input type="text" class="form-control" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/ x730465936450-x-test-hook-48>
+            <div class="input-group-append" x730465936450-x-test-hook-49>
+                <div class="input-group-text" x730465936450-x-test-hook-50>
+                    <i class="material-icons" x730465936450-x-test-hook-51>date_range</i>
                 </div>
             </div>
         </div>
@@ -352,20 +351,20 @@
                 class="btn btn-primary grid-search-button d-block float-right"
                 title="{{ 'Search'|trans({}, 'Admin.Actions') }}"
                 name="{{ full_name }}[search]"
-        >
-          <i class="material-icons">search</i>
+         x730465936450-x-test-tpl-52>
+          <i class="material-icons" x730465936450-x-test-hook-53>search</i>
           {{ 'Search'|trans({}, 'Admin.Actions') }}
         </button>
 
         {% if show_reset_button %}
-          <div class="clearfix"></div>
+          <div class="clearfix" x730465936450-x-test-tpl-54></div>
             <button type="reset"
                     name="{{ full_name }}[reset]"
                     class="btn btn-link js-reset-search btn d-block grid-reset-button float-right"
                     data-url="{{ reset_url }}"
                     data-redirect="{{ redirect_url }}"
-            >
-              <i class="material-icons">clear</i>
+             x730465936450-x-test-tpl-55>
+              <i class="material-icons" x730465936450-x-test-hook-56>clear</i>
               {{ 'Reset'|trans({}, 'Admin.Actions') }}
             </button>
         {% endif %}
@@ -374,38 +373,38 @@
 
 {% block switch_widget %}
     {% spaceless %}
-    <span class="ps-switch">
+    <span class="ps-switch" x730465936450-x-test-tpl-57>
         {% for choice in choices %}
             {% set inputId = id ~'_' ~ choice.value %}
-            <input id="{{inputId}}" {{ block('attributes') }} name="{{ full_name }}" value="{{ choice.value }}" {%- if choice is selectedchoice(value) -%}checked="" {%- endif -%} {%- if disabled -%}disabled="" {%- endif -%} type="radio">
-            <label for="{{inputId}}">{{ choice.label|trans({}, choice_translation_domain) }}</label>
+            <input id="{{inputId}}" {{ block('attributes') }} name="{{ full_name }}" value="{{ choice.value }}" {%- if choice is selectedchoice(value) -%}checked="" {%- endif -%} {%- if disabled -%}disabled="" {%- endif -%} type="radio" x730465936450-x-test-hook-58>
+            <label for="{{inputId}}" x730465936450-x-test-hook-59>{{ choice.label|trans({}, choice_translation_domain) }}</label>
         {% endfor %}
-        <span class="slide-button"></span>
+        <span class="slide-button" x730465936450-x-test-hook-60></span>
     </span>
     {% endspaceless %}
 {% endblock switch_widget %}
 
 {% block _form_step6_attachments_widget %}
-    <div class="js-options-no-attachments {{ form|length > 0 ? 'hide' : '' }}">
-        <small>{{ 'There is no attachment yet.'|trans({}, 'Admin.Catalog.Notification') }}</small>
+    <div class="js-options-no-attachments {{ form|length> 0 ? 'hide' : '' }}" x730465936450-x-test-tpl-61>
+        <small x730465936450-x-test-hook-62>{{ 'There is no attachment yet.'|trans({}, 'Admin.Catalog.Notification') }}</small>
     </div>
-    <div id="product-attachments" class="panel panel-default">
-      <div class="panel-body js-options-with-attachments {{ form|length == 0 ? 'hide' : '' }}">
-        <div>
-          <table id="product-attachment-file" class="table">
-            <thead class="thead-default">
-              <tr>
-                <th class="col-md-3"><input type="checkbox" id="product-attachment-files-check" /> {{ 'Title'|trans({}, 'Admin.Global') }}</th>
-                <th class="col-md-6">{{ 'File name'|trans({}, 'Admin.Global') }}</th>
-                <th class="col-md-2">{{ 'Type'|trans({}, 'Admin.Catalog.Feature') }}</th>
+    <div id="product-attachments" class="panel panel-default" x730465936450-x-test-tpl-63>
+      <div class="panel-body js-options-with-attachments {{ form|length == 0 ? 'hide' : '' }}" x730465936450-x-test-hook-64>
+        <div x730465936450-x-test-hook-65>
+          <table id="product-attachment-file" class="table" x730465936450-x-test-hook-66>
+            <thead class="thead-default" x730465936450-x-test-hook-67>
+              <tr x730465936450-x-test-hook-68>
+                <th class="col-md-3" x730465936450-x-test-hook-69><input type="checkbox" id="product-attachment-files-check" / x730465936450-x-test-hook-70> {{ 'Title'|trans({}, 'Admin.Global') }}</th>
+                <th class="col-md-6" x730465936450-x-test-hook-71>{{ 'File name'|trans({}, 'Admin.Global') }}</th>
+                <th class="col-md-2" x730465936450-x-test-hook-72>{{ 'Type'|trans({}, 'Admin.Catalog.Feature') }}</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody x730465936450-x-test-hook-73>
             {%- for child in form %}
-              <tr>
-                <td class="col-md-3">{{ form_widget(child) }}</td>
-                <td class="col-md-6 file-name"><span>{{ form.vars.attr.data[loop.index0]['file_name'] }}</span></td>
-                <td class="col-md-2">{{ form.vars.attr.data[loop.index0]['mime'] }}</td>
+              <tr x730465936450-x-test-hook-74>
+                <td class="col-md-3" x730465936450-x-test-hook-75>{{ form_widget(child) }}</td>
+                <td class="col-md-6 file-name" x730465936450-x-test-hook-76><span x730465936450-x-test-hook-77>{{ form.vars.attr.data[loop.index0]['file_name'] }}</span></td>
+                <td class="col-md-2" x730465936450-x-test-hook-78>{{ form.vars.attr.data[loop.index0]['mime'] }}</td>
               </tr>
             {% endfor -%}
             </tbody>
@@ -450,15 +449,15 @@
       {% endif %}
 
       {% if material_design is defined %}
-        <div class="md-checkbox md-checkbox-inline">
-          <label{% for attrname, attrvalue in label_attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %}>
+        <div class="md-checkbox md-checkbox-inline" x730465936450-x-test-tpl-79>
+          <label{% for attrname, attrvalue in label_attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %} x730465936450-x-test-hook-80>
           {{- widget|raw -}}
-          <i class="md-checkbox-control"></i>
+          <i class="md-checkbox-control" x730465936450-x-test-hook-81></i>
           {{- label is not same as(false) ? (translation_domain is same as(false) ? label|raw : label|raw) -}}
           </label>
         </div>
       {% else %}
-      <label{% for attrname, attrvalue in label_attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %}>
+      <label{% for attrname, attrvalue in label_attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %} x730465936450-x-test-tpl-82>
         {{- widget|raw -}}
         {{- label is not same as(false) ? (translation_domain is same as(false) ? label|raw : label|raw) -}}
       </label>
@@ -469,7 +468,7 @@
 {# Rows #}
 
 {% block form_row -%}
-    <div class="form-group{% if (not compound or force_error|default(false)) and not valid %} has-error{% endif %}">
+    <div class="form-group{% if (not compound or force_error|default(false)) and not valid %} has-error{% endif %}" x730465936450-x-test-tpl-83>
         {{- form_label(form) -}}
         {{- form_widget(form) -}}
         {{- form_errors(form) -}}
@@ -477,7 +476,7 @@
 {%- endblock form_row %}
 
 {% block button_row -%}
-    <div class="form-group">
+    <div class="form-group" x730465936450-x-test-tpl-84>
         {{- form_widget(form) -}}
     </div>
 {%- endblock button_row %}
@@ -503,14 +502,14 @@
 {%- endblock datetime_row %}
 
 {% block checkbox_row -%}
-    <div class="form-group{% if not valid %} has-error{% endif %}">
+    <div class="form-group{% if not valid %} has-error{% endif %}" x730465936450-x-test-tpl-85>
         {{- form_widget(form) -}}
         {{- form_errors(form) -}}
     </div>
 {%- endblock checkbox_row %}
 
 {% block radio_row -%}
-    <div class="form-group{% if not valid %} has-error{% endif %}">
+    <div class="form-group{% if not valid %} has-error{% endif %}" x730465936450-x-test-tpl-86>
         {{- form_widget(form) -}}
         {{- form_errors(form) -}}
     </div>
@@ -519,12 +518,12 @@
 {# Errors #}
 
 {% block form_errors -%}
-    {% if errors|length > 0 -%}
-    <div class="alert alert-danger">
-        {%- if errors|length > 1 -%}
-            <ul class="alert-text">
+    {% if errors|length> 0 -%}
+    <div class="alert alert-danger" x730465936450-x-test-tpl-87>
+        {%- if errors|length> 1 -%}
+            <ul class="alert-text" x730465936450-x-test-hook-88>
                 {%- for error in errors -%}
-                    <li> {{
+                    <li x730465936450-x-test-hook-89> {{
                         error.messagePluralization is null
                         ? error.messageTemplate|trans(error.messageParameters, 'form_error')
                         : error.messageTemplate|transchoice(error.messagePluralization, error.messageParameters, 'form_error')
@@ -533,9 +532,9 @@
                 {%- endfor -%}
             </ul>
         {%- else -%}
-            <div class="alert-text">
+            <div class="alert-text" x730465936450-x-test-hook-90>
             {%- for error in errors -%}
-                <p> {{
+                <p x730465936450-x-test-hook-91> {{
                     error.messagePluralization is null
                     ? error.messageTemplate|trans(error.messageParameters, 'form_error')
                     : error.messageTemplate|transchoice(error.messagePluralization, error.messageParameters, 'form_error')
@@ -553,25 +552,25 @@
 
 {% block material_choice_table_widget %}
   {% spaceless %}
-    <div class="choice-table">
-      <table class="table table-bordered mb-0">
-        <thead>
-          <tr>
-            <th class="checkbox">
-              <div class="md-checkbox">
-                <label>
-                  <input type="checkbox" class="js-choice-table-select-all">
-                  <i class="md-checkbox-control"></i>
+    <div class="choice-table" x730465936450-x-test-tpl-92>
+      <table class="table table-bordered mb-0" x730465936450-x-test-hook-93>
+        <thead x730465936450-x-test-hook-94>
+          <tr x730465936450-x-test-hook-95>
+            <th class="checkbox" x730465936450-x-test-hook-96>
+              <div class="md-checkbox" x730465936450-x-test-hook-97>
+                <label x730465936450-x-test-hook-98>
+                  <input type="checkbox" class="js-choice-table-select-all" x730465936450-x-test-hook-99>
+                  <i class="md-checkbox-control" x730465936450-x-test-hook-100></i>
                   {{ 'Select all'|trans({}, 'Admin.Actions') }}
                 </label>
               </div>
             </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody x730465936450-x-test-hook-101>
         {% for child in form %}
-          <tr>
-            <td>
+          <tr x730465936450-x-test-hook-102>
+            <td x730465936450-x-test-hook-103>
               {{ form_widget(child, {'material_design': true}) }}
             </td>
           </tr>
@@ -584,19 +583,19 @@
 
 {% block material_multiple_choice_table_widget %}
   {% spaceless %}
-    <div class="{% if scrollable %}choice-table{% endif %} table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>{{ label }}</th>
+    <div class="{% if scrollable %}choice-table{% endif %} table-responsive" x730465936450-x-test-tpl-104>
+      <table class="table" x730465936450-x-test-hook-105>
+        <thead x730465936450-x-test-hook-106>
+          <tr x730465936450-x-test-hook-107>
+            <th x730465936450-x-test-hook-108>{{ label }}</th>
             {% for child_choice in form %}
-              <th class="text-center">
+              <th class="text-center" x730465936450-x-test-hook-109>
                 {% if child_choice.vars.multiple and child_choice.vars.name not in headers_to_disable %}
                   <a href="#"
                      class="js-multiple-choice-table-select-column"
                      data-column-num="{{ loop.index + 1 }}"
                      data-column-checked="false"
-                  >
+                   x730465936450-x-test-hook-110>
                     {{ child_choice.vars.label }}
                   </a>
                 {% else %}
@@ -606,14 +605,14 @@
             {% endfor %}
           </tr>
         </thead>
-        <tbody>
+        <tbody x730465936450-x-test-hook-111>
         {% for choice_name, choice_value in choices %}
-          <tr>
-            <td>
+          <tr x730465936450-x-test-hook-112>
+            <td x730465936450-x-test-hook-113>
               {{ choice_name }}
             </td>
             {% for child_choice_name, child_choice in form %}
-              <td class="text-center">
+              <td class="text-center" x730465936450-x-test-hook-114>
                 {% if child_choice_entry_index_mapping[choice_value][child_choice_name] is defined %}
                   {% set entry_index = child_choice_entry_index_mapping[choice_value][child_choice_name] %}
 
@@ -637,31 +636,31 @@
 
 {% block translatable_widget -%}
   {{ form_errors(form) }}
-  <div class="input-group locale-input-group js-locale-input-group d-flex">
+  <div class="input-group locale-input-group js-locale-input-group d-flex" x730465936450-x-test-tpl-115>
     {% for translateField in form %}
       {% set classes = translateField.vars.attr.class|default('') ~ ' js-locale-input'%}
       {% set classes = classes ~ ' js-locale-' ~ translateField.vars.label %}
       {% if default_locale.id_lang != translateField.vars.name %}
         {% set classes = classes ~ ' d-none' %}
       {% endif %}
-      <div class="{{ classes }}" style="flex-grow: 1;">
+      <div class="{{ classes }}" style="flex-grow: 1;" x730465936450-x-test-hook-116>
         {{ form_widget(translateField) }}
       </div>
     {% endfor %}
     {% if not hide_locales %}
-      <div class="dropdown">
+      <div class="dropdown" x730465936450-x-test-hook-117>
         <button class="btn btn-outline-secondary dropdown-toggle js-locale-btn"
                 type="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
                 id="{{ form.vars.id }}"
-        >
+         x730465936450-x-test-hook-118>
           {{ form.vars.default_locale.iso_code }}
         </button>
-        <div class="dropdown-menu" aria-labelledby="{{ form.vars.id }}">
+        <div class="dropdown-menu" aria-labelledby="{{ form.vars.id }}" x730465936450-x-test-hook-119>
           {% for locale in locales %}
-            <span class="dropdown-item js-locale-item" data-locale="{{ locale.iso_code }}">{{ locale.name }}</span>
+            <span class="dropdown-item js-locale-item" data-locale="{{ locale.iso_code }}" x730465936450-x-test-hook-120>{{ locale.name }}</span>
           {% endfor %}
         </div>
       </div>
@@ -675,7 +674,7 @@
   {% else -%}
     {% set attr = attr|merge({class: (attr.class|default('') ~ ' form-inline')|trim}) -%}
     {% if datetime is not defined or not datetime -%}
-      <div {{ block('widget_container_attributes') -}}>
+      <div {{ block('widget_container_attributes') -}} x730465936450-x-test-tpl-121>
     {%- endif %}
 
     {% set yearWidget = '<div class="col pl-0">' ~ form_widget(form.year) ~ '</div>'|raw %}
@@ -695,14 +694,14 @@
 {% endblock birthday_widget %}
 
 {% block generatable_text_widget %}
-  <div class="input-group">
+  <div class="input-group" x730465936450-x-test-tpl-122>
     {{- block('form_widget') -}}
-    <span class="input-group-btn ml-1">
+    <span class="input-group-btn ml-1" x730465936450-x-test-hook-123>
       <button class="btn btn-outline-secondary js-generator-btn"
               type="button"
               data-target-input-id="{{ id }}"
               data-generated-value-length="{{ generated_value_length }}"
-      >
+       x730465936450-x-test-hook-124>
         {{ 'Generate'|trans({}, 'Admin.Actions') }}
       </button>
    </span>

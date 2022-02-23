@@ -1,5 +1,4 @@
-{#**
- * 2007-2018 PrestaShop
+{#** * 2007-2018 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -25,7 +24,7 @@
 {% set buttonType = buttonType|default('primary') %}
 {% set right = right|default(false) %}
 
-<div class="{{ div_style|default("btn-group") }}" data-x-tpl-hook-2>
+<div class="{{ div_style|default("btn-group") }}" data-x-tpl-hook-2 x730610798529-x-test-tpl-1>
 
   {% if default_item is defined %}
     <a
@@ -33,39 +32,39 @@
       title="{{ default_item.title|default(default_item.label|default("")) }}"
       class="btn tooltip-link product-edit"
       {% if disabled is defined and disabled == true %}disabled="disabled"{% endif %}
-    >
+     x730610798529-x-test-hook-2>
       {% if default_item.icon %}
-        <i class="material-icons">{{ default_item.icon }}</i>
+        <i class="material-icons" x730610798529-x-test-hook-3>{{ default_item.icon }}</i>
       {% endif %}
       {{ default_item.label|default('') }}
     </a>
   {% endif %}
 
-  <button class="btn btn-link dropdown-toggle dropdown-toggle-split product-edit" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-link dropdown-toggle dropdown-toggle-split product-edit" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" x730610798529-x-test-hook-4>
     {{ menu_label|default('') }}
   </button>
 
-  <div class="dropdown-menu{% if right %} dropdown-menu-right{% endif %}" x-placement="bottom-start" >
+  <div class="dropdown-menu{% if right %} dropdown-menu-right{% endif %}" x-placement="bottom-start"  x730610798529-x-test-hook-5>
     {% for entry in items %}
       {% if entry.divider is defined and entry.divider==true %}
-        <div class="dropdown-divider"></div>
+        <div class="dropdown-divider" x730610798529-x-test-hook-6></div>
       {% else %}
         <a
           class="dropdown-item product-edit" href="{{ entry.href|default("#") }}"
           {% if entry.onclick is defined %}onclick="{{ entry.onclick }}"{% endif %}
           {% if entry.target is defined %}target="{{ entry.target }}"{% endif %}
-        >
+         x730610798529-x-test-hook-7>
           {% if entry.icon %}
             <i class="material-icons" data-x-test-hook-9>{{ entry.icon }}</i>
           {% endif %}
           {{ entry.label|default('') }}
         </a>
       {% endif %}
-        <br>
+        <br x730610798529-x-test-hook-9>
     {% endfor %}
   </div>
 
 </div>
 
 
-<test data-x-tpl-hook-1/>
+<test data-x-tpl-hook-1/ x730610798529-x-test-tpl-10>
