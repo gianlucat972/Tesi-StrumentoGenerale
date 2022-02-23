@@ -84,7 +84,7 @@ public class Application {
                         System.out.println("[Correzione File FE] timestamp da aggiungere: "+timeNano);
 //                        System.out.println("[Correzione File FE] args[4] (tag) da aggiungere: "+args[4]);
 //                        newContentFeFile = newContentFeFile.replaceAll(" x-test"," "+args[4]+"-"+timeNano+"-x-test");
-                        newContentFeFile = newContentFeFile.replaceAll(" x-test"," x"+timeNano+"-x-test");
+                        newContentFeFile = newContentFeFile.replaceAll(" x-test"," x-test-hook-"+timeNano+"-x-test");
                         System.out.println(newContentFeFile);
                         //TODO: Sezione elimina doppioni
                         List<String> wordBlackList = new ArrayList<>();
