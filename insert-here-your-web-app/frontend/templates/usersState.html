@@ -1,27 +1,26 @@
-<div>
-    <div class="form-group">
-        <button type="button" ng-click="ctrl.newUser = {}" class="btn btn-default">New</button>
+<div x458335657960-x-test-tpl-1>    <div class="form-group" x458335657960-x-test-hook-2>
+        <button type="button" ng-click="ctrl.newUser = {}" class="btn btn-default" x458335657960-x-test-hook-3>New</button>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th style="width:40%">Name</th><th style="width:40%">Date of birth</th><th style="width:20%">Actions</th>
+    <table class="table" x458335657960-x-test-hook-4>
+        <thead x458335657960-x-test-hook-5>
+            <tr x458335657960-x-test-hook-6>
+                <th style="width:40%" x458335657960-x-test-hook-7>Name</th><th style="width:40%" x458335657960-x-test-hook-8>Date of birth</th><th style="width:20%" x458335657960-x-test-hook-9>Actions</th>
             </tr>
         </thead>
-        <tbody>
-            <tr ng-repeat="user in ctrl.users">
-                <td>{{user.name}}</td>
-                <td>{{user.dateOfBirth | date}}</td>
-				<td>
-                    <button type="button" class="btn btn-default">Edit</button>
+        <tbody x458335657960-x-test-hook-10>
+            <tr ng-repeat="user in ctrl.users" x458335657960-x-test-hook-11>
+                <td x458335657960-x-test-hook-12>{{user.name}}</td>
+                <td x458335657960-x-test-hook-13>{{user.dateOfBirth | date}}</td>
+				<td x458335657960-x-test-hook-14>
+                    <button type="button" class="btn btn-default" x458335657960-x-test-hook-15>Edit</button>
                 </td>
             </tr>
-			<tr ng-if="ctrl.newUser">
-				<td><input class="form-control" ng-model="ctrl.newUser.name"></td>
-				<td><calendar ng-model="ctrl.newUser.dateOfBirth"></calendar></td>
-				<td>
-					<button type="button" class="btn btn-default" ng-click="ctrl.addNewUser()">Add</button>
-					<button type="button" class="btn btn-default" ng-click="ctrl.newUser = undefined">Cancel</button>
+			<tr ng-if="ctrl.newUser" x458335657960-x-test-hook-16>
+				<td x458335657960-x-test-hook-17><input class="form-control" ng-model="ctrl.newUser.name" x458335657960-x-test-hook-18></td>
+				<td x458335657960-x-test-hook-19><calendar ng-model="ctrl.newUser.dateOfBirth" x458335657960-x-test-hook-20></calendar></td>
+				<td x458335657960-x-test-hook-21>
+					<button type="button" class="btn btn-default" ng-click="ctrl.addNewUser()" x458335657960-x-test-hook-22>Add</button>
+					<button type="button" class="btn btn-default" ng-click="ctrl.newUser = undefined" x458335657960-x-test-hook-23>Cancel</button>
 				</td>
 			</tr>
         </tbody>

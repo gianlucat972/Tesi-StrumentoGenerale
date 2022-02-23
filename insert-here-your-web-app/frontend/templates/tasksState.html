@@ -1,32 +1,31 @@
-<ui-view>
-    <div class="form-group">
-        <button type="button" class="btn btn-default" ui-sref=".edit">New</button>
+<ui-view x458333320328-x-test-tpl-1>    <div class="form-group" x458333320328-x-test-hook-2>
+        <button type="button" class="btn btn-default" ui-sref=".edit" x458333320328-x-test-hook-3>New</button>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th style="width:35%">Task description</th>
-                <th style="width:25%">Assigned to</th>
-                <th style="width:10%">Status</th>
-                <th style="width:30%">Actions</th>
+    <table class="table" x458333320328-x-test-hook-4>
+        <thead x458333320328-x-test-hook-5>
+            <tr x458333320328-x-test-hook-6>
+                <th style="width:35%" x458333320328-x-test-hook-7>Task description</th>
+                <th style="width:25%" x458333320328-x-test-hook-8>Assigned to</th>
+                <th style="width:10%" x458333320328-x-test-hook-9>Status</th>
+                <th style="width:30%" x458333320328-x-test-hook-10>Actions</th>
             </tr>
         </thead>
-        <tbody>
-            <tr ng-repeat="task in ctrl.tasks">
-                <td ng-class="{strikethrough : !!task.done}">{{::task.description}}</td>
-                <td ng-class="{strikethrough : !!task.done}">{{::task.user}}</td>
-                <td>
-                    <span class="label label-default" ng-if="!task.done">To Do</span>
-                    <span class="label label-success" ng-if="!!task.done">Done</span>
+        <tbody x458333320328-x-test-hook-11>
+            <tr ng-repeat="task in ctrl.tasks" x458333320328-x-test-hook-12>
+                <td ng-class="{strikethrough : !!task.done}" x458333320328-x-test-hook-13>{{::task.description}}</td>
+                <td ng-class="{strikethrough : !!task.done}" x458333320328-x-test-hook-14>{{::task.user}}</td>
+                <td x458333320328-x-test-hook-15>
+                    <span class="label label-default" ng-if="!task.done" x458333320328-x-test-hook-16>To Do</span>
+                    <span class="label label-success" ng-if="!!task.done" x458333320328-x-test-hook-17>Done</span>
                     &nbsp;
                 </td>
-                <td>
-                    <div class="form-group">
+                <td x458333320328-x-test-hook-18>
+                    <div class="form-group" x458333320328-x-test-hook-19>
 
-                        <button type="button" class="btn btn-xs btn-success" ng-if="!task.done" ng-click="task.done = true">&#x2714; Mark as Done</button>
-                        <button type="button" class="btn btn-xs btn-default" ng-if="!!task.done" ng-click="task.done = false">&#x270E; Mark as To Do</button>
-                        <button type="button" class="btn btn-xs btn-default" ng-if="!task.done" ui-sref=".edit({taskIndex: $index})">&#x270E; Edit</button>
-                        <button type="button" class="btn btn-xs btn-danger">&#x2718; Remove</button>
+                        <button type="button" class="btn btn-xs btn-success" ng-if="!task.done" ng-click="task.done = true" x458333320328-x-test-hook-20>&#x2714; Mark as Done</button>
+                        <button type="button" class="btn btn-xs btn-default" ng-if="!!task.done" ng-click="task.done = false" x458333320328-x-test-hook-21>&#x270E; Mark as To Do</button>
+                        <button type="button" class="btn btn-xs btn-default" ng-if="!task.done" ui-sref=".edit({taskIndex: $index})" x458333320328-x-test-hook-22>&#x270E; Edit</button>
+                        <button type="button" class="btn btn-xs btn-danger" x458333320328-x-test-hook-23>&#x2718; Remove</button>
                     </div>
                 </td>
             </tr>
