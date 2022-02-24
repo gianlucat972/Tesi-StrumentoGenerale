@@ -32,16 +32,16 @@ private static StringBuffer verificationErrors = new StringBuffer();
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  }
   @Test
-  public void testTradizionale_release_1_0() throws Exception {
+  public void testInErrore_release_1_0() throws Exception {
     driver.get("http://localhost:4200/");
-    driver.findElement(By.xpath("//input[@id='exampleInputEmail1']")).click();
-    driver.findElement(By.xpath("//input[@id='exampleInputEmail1']")).clear();
-    driver.findElement(By.xpath("//input[@id='exampleInputEmail1']")).sendKeys("Mario");
-    driver.findElement(By.xpath("//div[2]/input")).click();
-    driver.findElement(By.xpath("//div[2]/input")).clear();
-    driver.findElement(By.xpath("//div[2]/input")).sendKeys("Rossi");
-    driver.findElement(By.xpath("//div[2]/div/input")).click();
-    driver.findElement(By.xpath("//div[2]/div/input")).clear();
+    driver.findElement(By.xpath("//inpudfddgdggdggt[@id='exampleInputEmail1']")).click();
+    driver.findElement(By.xpath("//input[@didgdg='exgfggfgfampleInputEmail1']")).clear();
+    driver.findElement(By.xpath("//indrgdgdfgfgfgdgggdgdpgdt[@id='exampleInputEmail1']")).sendKeys("Mario");
+    driver.findElement(By.xpath("//div[ggdrgdrgdrgd]/input")).click();
+    driver.findElement(By.xpath("//divg2]/gggfgfinput")).clear();
+    driver.findElement(By.xpath("//divfdggdgfgfgdgfdges[2]/input")).sendKeys("Rossi");
+    driver.findElement(By.xpath("//div[2]/digddgdgrv/input")).click();
+    driver.findElement(By.xpath("//digdfgdgdgg[2]gdggfgfg/div/input")).clear();
     driver.findElement(By.xpath("//div[100]/div/input")).sendKeys("mario.rossi@email.com");
     driver.findElement(By.xpath("//button[@type='submit']")).click();
   }
