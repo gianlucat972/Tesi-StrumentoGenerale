@@ -236,7 +236,7 @@ jobs:
           cd miglioramentoReportTest/target
           ls -a
           echo "Proviamo ad eseguire il file jar, passandogli come args[0] la directory dei report da analizzare e come args[1] il nome del report complessivo xls da generare"
-          java -jar miglioramentoReportTest-0.0.1-jarReportTest.jar /home/runner/work/Tesi-StrumentoGenerale/Tesi-StrumentoGenerale/TestSuite/${GITHUB_REF#refs/tags/} tabellaReportTest
+          java -jar miglioramentoReportTest-0.0.1-jarReportTest.jar /home/runner/work/Tesi-StrumentoGenerale/Tesi-StrumentoGenerale/TestSuite/${GITHUB_REF#refs/tags/} ${GITHUB_REF#refs/tags/}
           echo "File jar eseguito!!!"
           echo "Vediamo il file xls di report unificato se c'è"
           ls -a 
